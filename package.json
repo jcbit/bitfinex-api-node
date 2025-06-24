@@ -1,7 +1,7 @@
 {
-  "name": "bitfinex-api-node",
+  "name": "@jcbit/bitfinex-api-node",
   "version": "7.1.0",
-  "description": "Node reference library for Bitfinex API",
+  "description": "Node reference library for Bitfinex API - Modernized Fork",
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
@@ -28,7 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bitfinexcom/bitfinex-api-node.git"
+    "url": "https://github.com/jcbit/bitfinex-api-node.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "bitfinex",
@@ -41,6 +44,7 @@
     "rest"
   ],
   "contributors": [
+    "JC <jcbit@users.noreply.github.com> (https://github.com/jcbit)",
     "Ezequiel Wernicke <ezequiel.wernicke@bitfinex.com> (https://www.bitfinex.com)",
     "Josh Rossi <josh@bitfinex.com> (https://www.bitfinex.com)",
     "Cris Mihalache <cris.m@bitfinex.com> (https://www.bitfinex.com)",
@@ -51,9 +55,9 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/bitfinexcom/bitfinex-api-node/issues"
+    "url": "https://github.com/jcbit/bitfinex-api-node/issues"
   },
-  "homepage": "http://bitfinexcom.github.io/bitfinex-api-node/",
+  "homepage": "https://github.com/jcbit/bitfinex-api-node#readme",
   "devDependencies": {
     "bfx-api-mock-srv": "^1.0.4",
     "blessed": "^0.1.81",
@@ -94,7 +98,11 @@
     "index.js",
     "lib/",
     "LICENSE.md",
-    "README.md"
+    "README-FORK.md",
+    "MODERNIZATION.md",
+    "TECHNICAL-REVIEW.md",
+    "ENV-SETUP.md",
+    ".env.example"
   ],
   "type": "commonjs"
 }
