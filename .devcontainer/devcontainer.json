@@ -1,0 +1,58 @@
+{
+  "name": "Bitfinex API Node Development",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  "features": {
+    "ghcr.io/devcontainers/features/git:1": {},
+    "ghcr.io/devcontainers/features/github-cli:1": {}
+  },
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "none",
+  "postCreateCommand": "./.devcontainer/postCreateCommand.sh",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-vscode.vscode-json",
+        "ms-vscode.vscode-typescript-next",
+        "bradlc.vscode-tailwindcss",
+        "esbenp.prettier-vscode",
+        "ms-vscode.vscode-eslint",
+        "ms-vscode.vscode-node-debug2",
+        "ms-vscode.vscode-js-debug",
+        "ms-nodejs.vscode-nodejs-pack",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.path-intellisense",
+        "ms-vscode.vscode-github-issue-notebooks",
+        "github.vscode-pull-request-github"
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": "explicit"
+        },
+        "javascript.preferences.quoteStyle": "single",
+        "typescript.preferences.quoteStyle": "single"
+      }
+    }
+  },
+  "forwardPorts": [3060, 3061, 3062],
+  "portsAttributes": {
+    "3060": {
+      "label": "Bitfinex API Main",
+      "onAutoForward": "notify"
+    },
+    "3061": {
+      "label": "Bitfinex API Test",
+      "onAutoForward": "notify"
+    },
+    "3062": {
+      "label": "Bitfinex API Dev",
+      "onAutoForward": "notify"
+    }
+  },
+  "remoteUser": "node",
+  "containerUser": "node",
+  "mounts": [
+    "source=${localWorkspaceFolder}/.devcontainer,target=/tmp/.devcontainer,type=bind"
+  ]
+}
