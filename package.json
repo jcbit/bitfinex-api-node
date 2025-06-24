@@ -1,6 +1,6 @@
 {
   "name": "@jcbit/bitfinex-api-node",
-  "version": "7.1.0",
+  "version": "7.1.1",
   "description": "Node reference library for Bitfinex API - Modernized Fork",
   "engines": {
     "node": ">=20.0.0",
@@ -24,14 +24,14 @@
     "fresh-install": "npm run clean && npm install",
     "prepare": "husky",
     "start": "node examples/rest2/ticker.js",
-    "dev": "nodemon examples/rest2/ticker.js"
+    "dev": "nodemon examples/rest2/ticker.js",
+    "publish:github": "npm publish --registry https://npm.pkg.github.com",
+    "publish:npm": "npm publish --registry https://registry.npmjs.org --access public",
+    "publish:both": "npm run publish:github && npm run publish:npm"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/jcbit/bitfinex-api-node.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
   },
   "keywords": [
     "bitfinex",

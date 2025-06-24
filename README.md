@@ -9,6 +9,7 @@
 ## 🚀 What's New in v7.1.0
 
 ### ✨ **Modernization Features**
+
 - **Node.js 20+** minimum requirement
 - **All 47 dependencies updated** to latest versions
 - **Enhanced npm scripts** for better development experience
@@ -16,6 +17,7 @@
 - **Complete technical documentation** and improvement roadmap
 
 ### 🔧 **Key Improvements**
+
 - Fixed critical **ws v8+ compatibility** issue
 - Improved **WebSocket message handling**
 - Better **error handling** and debugging
@@ -23,6 +25,7 @@
 - **228 tests passing** with enhanced validation
 
 ### 📚 **Enhanced Documentation**
+
 - `TECHNICAL-REVIEW.md` - Complete code analysis
 - `IMPROVEMENT-PROPOSALS.md` - Future enhancement roadmap
 - `ENV-SETUP.md` - Configuration guide
@@ -31,6 +34,7 @@
 ## 📦 Installation
 
 ### GitHub Package Registry
+
 ```bash
 # Configure npm to use GitHub Package Registry for @jcbit scope
 echo "@jcbit:registry=https://npm.pkg.github.com" >> ~/.npmrc
@@ -40,41 +44,42 @@ npm install @jcbit/bitfinex-api-node
 ```
 
 ### Requirements
+
 - **Node.js**: ≥20.0.0
 - **npm**: ≥10.0.0
 
 ## 🔧 Quick Start
 
 ```javascript
-const { BFX } = require('@jcbit/bitfinex-api-node')
+const { BFX } = require("@jcbit/bitfinex-api-node");
 
 // REST API
 const bfx = new BFX({
   apiKey: process.env.API_KEY,
   apiSecret: process.env.API_SECRET,
-  transform: true
-})
+  transform: true,
+});
 
-const rest = bfx.rest(2)
+const rest = bfx.rest(2);
 
 // Get ticker
-rest.ticker('tBTCUSD').then(ticker => {
-  console.log('BTC/USD:', ticker)
-})
+rest.ticker("tBTCUSD").then((ticker) => {
+  console.log("BTC/USD:", ticker);
+});
 
 // WebSocket API
-const ws = bfx.ws(2)
+const ws = bfx.ws(2);
 
-ws.on('open', () => {
-  console.log('Connected to Bitfinex WebSocket')
-  ws.subscribeTicker('tBTCUSD')
-})
+ws.on("open", () => {
+  console.log("Connected to Bitfinex WebSocket");
+  ws.subscribeTicker("tBTCUSD");
+});
 
-ws.onTicker({ symbol: 'tBTCUSD' }, (ticker) => {
-  console.log('Ticker update:', ticker)
-})
+ws.onTicker({ symbol: "tBTCUSD" }, (ticker) => {
+  console.log("Ticker update:", ticker);
+});
 
-ws.open()
+ws.open();
 ```
 
 ## 🔐 Configuration
@@ -96,15 +101,15 @@ See `ENV-SETUP.md` for complete configuration options.
 
 This is a **modernized fork** of the official `bitfinex-api-node` with:
 
-| Feature | Original | This Fork |
-|---------|----------|-----------|
-| **Node.js** | ≥16.0.0 | ≥20.0.0 |
-| **Dependencies** | Outdated | All updated (47 deps) |
-| **ws Library** | v7 (broken) | v8+ (fixed) |
-| **Configuration** | Manual | .env + guide |
-| **Documentation** | Basic | Comprehensive |
-| **Development** | Limited | Enhanced scripts |
-| **Testing** | Basic | Validated + examples |
+| Feature           | Original    | This Fork             |
+| ----------------- | ----------- | --------------------- |
+| **Node.js**       | ≥16.0.0     | ≥20.0.0               |
+| **Dependencies**  | Outdated    | All updated (47 deps) |
+| **ws Library**    | v7 (broken) | v8+ (fixed)           |
+| **Configuration** | Manual      | .env + guide          |
+| **Documentation** | Basic       | Comprehensive         |
+| **Development**   | Limited     | Enhanced scripts      |
+| **Testing**       | Basic       | Validated + examples  |
 
 ## 📋 Available Scripts
 
@@ -133,12 +138,14 @@ npm run fresh-install # Clean install
 This package maintains **100% compatibility** with the original Bitfinex API. All methods, events, and functionality work exactly the same.
 
 ### REST API
+
 - Account management (wallets, positions, orders)
 - Market data (tickers, trades, order books)
 - Trading operations (submit, cancel, modify orders)
 - Funding (loans, credits, offers)
 
 ### WebSocket API
+
 - Real-time market data
 - Account updates
 - Order management
@@ -164,7 +171,7 @@ See `IMPROVEMENT-PROPOSALS.md` for detailed enhancement plans:
 - **TypeScript migration** for better DX
 - **Smart reconnection** with exponential backoff
 - **Enhanced error handling** with typed errors
-- **Connection pooling** for REST optimization  
+- **Connection pooling** for REST optimization
 - **Debug dashboard** for real-time monitoring
 - **CLI tools** for development and testing
 
@@ -173,6 +180,7 @@ See `IMPROVEMENT-PROPOSALS.md` for detailed enhancement plans:
 This is a **personal fork** focused on modernization. For issues with the core API functionality, please refer to the [official repository](https://github.com/bitfinexcom/bitfinex-api-node).
 
 For modernization-specific issues or suggestions:
+
 1. Check existing [issues](https://github.com/jcbit/bitfinex-api-node/issues)
 2. Create a new issue with detailed description
 3. PRs welcome for bug fixes and improvements
@@ -192,7 +200,8 @@ MIT License - see [LICENSE.md](LICENSE.md)
 **⚠️ Disclaimer**: This is an **unofficial modernized fork**. For production use, consider the maintenance implications and evaluate whether the original library meets your needs.
 
 **🔗 Links**:
+
 - [Original Repository](https://github.com/bitfinexcom/bitfinex-api-node)
-- [This Fork](https://github.com/jcbit/bitfinex-api-node)  
+- [This Fork](https://github.com/jcbit/bitfinex-api-node)
 - [Release Notes](https://github.com/jcbit/bitfinex-api-node/releases)
 - [Technical Review](TECHNICAL-REVIEW.md)

@@ -5,6 +5,7 @@
 The **@jcbit/bitfinex-api-node** package has been successfully published to GitHub Package Registry.
 
 ### 📋 **Package Details**
+
 - **Name**: `@jcbit/bitfinex-api-node`
 - **Version**: `7.1.0`
 - **Registry**: GitHub Package Registry
@@ -16,16 +17,19 @@ The **@jcbit/bitfinex-api-node** package has been successfully published to GitH
 #### For End Users:
 
 1. **Configure npm to use GitHub Package Registry**:
+
 ```bash
 echo "@jcbit:registry=https://npm.pkg.github.com" >> ~/.npmrc
 ```
 
 2. **Authenticate with GitHub** (users need a GitHub token with `read:packages` permission):
+
 ```bash
 echo "//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN" >> ~/.npmrc
 ```
 
 3. **Install the package**:
+
 ```bash
 npm install @jcbit/bitfinex-api-node
 ```
@@ -33,24 +37,24 @@ npm install @jcbit/bitfinex-api-node
 #### Using in Projects:
 
 ```javascript
-const { BFX } = require('@jcbit/bitfinex-api-node')
+const { BFX } = require("@jcbit/bitfinex-api-node");
 
 // Same API as original, but modernized
 const bfx = new BFX({
   apiKey: process.env.API_KEY,
   apiSecret: process.env.API_SECRET,
-  transform: true
-})
+  transform: true,
+});
 
 // Use REST API
-const rest = bfx.rest(2)
-rest.ticker('tBTCUSD').then(console.log)
+const rest = bfx.rest(2);
+rest.ticker("tBTCUSD").then(console.log);
 
-// Use WebSocket API  
-const ws = bfx.ws(2)
-ws.on('open', () => ws.subscribeTicker('tBTCUSD'))
-ws.onTicker({ symbol: 'tBTCUSD' }, console.log)
-ws.open()
+// Use WebSocket API
+const ws = bfx.ws(2);
+ws.on("open", () => ws.subscribeTicker("tBTCUSD"));
+ws.onTicker({ symbol: "tBTCUSD" }, console.log);
+ws.open();
 ```
 
 ### 🔐 **Authentication Requirements**
@@ -64,6 +68,7 @@ Since GitHub Packages are private by default, users need:
 ### 📊 **Package Contents**
 
 The published package includes:
+
 - `index.js` - Main entry point
 - `lib/` - Core library files
 - `LICENSE.md` - MIT license
@@ -82,13 +87,14 @@ The published package includes:
 ✅ **Comprehensive documentation**  
 ✅ **Environment configuration system**  
 ✅ **All 228 tests passing**  
-✅ **Zero linting errors**  
+✅ **Zero linting errors**
 
 ### 🔄 **Version Management**
 
 Current version: **7.1.0**
 
 To publish future versions:
+
 1. Update version in `package.json`
 2. Commit changes: `git commit -am "Bump version to X.X.X"`
 3. Create tag: `git tag vX.X.X`
@@ -100,6 +106,7 @@ To publish future versions:
 If you want **public distribution without authentication**, consider:
 
 1. **Publishing to npmjs.org**:
+
 ```bash
 # Configure for public npm
 npm config set registry https://registry.npmjs.org
@@ -107,13 +114,14 @@ npm publish --access public
 ```
 
 2. **Making GitHub Package public**:
+
 - Go to package settings on GitHub
 - Change visibility to public (requires GitHub Pro/Team)
 
 ### 📚 **Documentation Links**
 
 - **Package**: https://github.com/users/jcbit/packages/npm/package/bitfinex-api-node
-- **Repository**: https://github.com/jcbit/bitfinex-api-node  
+- **Repository**: https://github.com/jcbit/bitfinex-api-node
 - **Release**: https://github.com/jcbit/bitfinex-api-node/releases/tag/v7.1.0
 - **Technical Review**: [TECHNICAL-REVIEW.md](./TECHNICAL-REVIEW.md)
 - **Setup Guide**: [ENV-SETUP.md](./ENV-SETUP.md)
