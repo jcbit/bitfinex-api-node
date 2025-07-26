@@ -10,7 +10,7 @@
 
 ### 🔧 **Improvements**
 
-- **Dependencies Updated**: 
+- **Dependencies Updated**:
   - `bignumber.js`: 9.3.0 → 9.3.1
   - `ws`: 8.18.2 → 8.18.3
   - `dotenv`: 16.4.5 → 17.2.1 (major version upgrade)
@@ -35,7 +35,9 @@
 ### 🎯 **Technical Details**
 
 #### WebSocket Filter Fix
+
 The `_payloadPassesFilter` function now correctly handles all empty values:
+
 ```javascript
 // Before: Only checked _isUndefined(filterValue)
 // After: Uses _isEmpty(filterValue) for comprehensive empty checking
@@ -45,13 +47,15 @@ if (_isEmpty(filterValue) || filterValue === '*') {
 ```
 
 This fix ensures that WebSocket subscription filters work correctly with:
+
 - `undefined` values
-- `null` values  
+- `null` values
 - Empty strings `''`
 - Empty arrays `[]`
 - Empty objects `{}`
 
 #### Dependency Highlights
+
 - **dotenv v17**: Enhanced environment variable management with better logging
 - **ws v8.18.3**: Latest WebSocket implementation with security fixes
 - **mocha v11.7.1**: Updated testing framework with improved performance
@@ -79,12 +83,14 @@ npm install @jcbit/bitfinex-api-node@^7.2.0
 ---
 
 **📊 Test Results Summary:**
+
 - 228 passing ✅
 - 3 pending (sequencing edge cases, intentionally skipped)
 - 0 failing ❌
 - 100% core functionality working
 
 **🔗 Useful Links:**
+
 - [Full Technical Review](TECHNICAL-REVIEW.md)
 - [Development Setup](ENV-SETUP.md)
 - [AI Agent Instructions](.github/copilot-instructions.md)

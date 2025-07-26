@@ -1,6 +1,6 @@
 {
   "name": "@jcbit/bitfinex-api-node",
-  "version": "7.2.0",
+  "version": "7.2.1",
   "description": "Node reference library for Bitfinex API - Modernized Fork",
   "engines": {
     "node": ">=20.0.0",
@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jcbit/bitfinex-api-node.git"
+    "url": "git+https://github.com/jcbit/bitfinex-api-node.git"
   },
   "keywords": [
     "bitfinex",
@@ -104,5 +104,14 @@
     "ENV-SETUP.md",
     ".env.example"
   ],
-  "type": "commonjs"
+  "type": "commonjs",
+  "overrides": {
+    "bfx-api-node-ws1": {
+      "debug": "^4.4.1",
+      "ws": "^8.18.3"
+    },
+    "blessed-contrib": {
+      "xml2js": "^0.6.2"
+    }
+  }
 }
