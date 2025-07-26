@@ -7,6 +7,7 @@ El paquete **@jcbit/bitfinex-api-node** está ahora disponible en:
 ### 📍 **Ubicaciones de Publicación**
 
 1. **🔒 GitHub Package Registry** (v7.1.0)
+
    - URL: https://github.com/users/jcbit/packages/npm/package/bitfinex-api-node
    - Requiere autenticación con GitHub
 
@@ -82,30 +83,33 @@ git push --tags
 
 ## 📊 **Estado Actual**
 
-| Registry | Versión | Estado | URL |
-|----------|---------|--------|-----|
-| **GitHub Packages** | v7.1.0 | ✅ Publicado | [Ver paquete](https://github.com/users/jcbit/packages/npm/package/bitfinex-api-node) |
-| **npm público** | v7.1.1 | ✅ Publicado | [Ver paquete](https://www.npmjs.com/package/@jcbit/bitfinex-api-node) |
+| Registry            | Versión | Estado       | URL                                                                                  |
+| ------------------- | ------- | ------------ | ------------------------------------------------------------------------------------ |
+| **GitHub Packages** | v7.1.0  | ✅ Publicado | [Ver paquete](https://github.com/users/jcbit/packages/npm/package/bitfinex-api-node) |
+| **npm público**     | v7.1.1  | ✅ Publicado | [Ver paquete](https://www.npmjs.com/package/@jcbit/bitfinex-api-node)                |
 
 ## 🔄 **Estrategia de Versionado**
 
 Para mantener ambos registries sincronizados:
 
-1. **Versiones idénticas**: Usar el script `publish-dual.sh` 
+1. **Versiones idénticas**: Usar el script `publish-dual.sh`
 2. **Versiones diferentes**: GitHub Packages tiende a ser más restrictivo
 3. **Releases**: Crear releases en GitHub que correspondan a versiones npm
 
 ## 🎯 **Recomendaciones**
 
 ### **Para usuarios finales**:
+
 - **Usar npm público** - Más fácil, sin autenticación
 - Comando: `npm install @jcbit/bitfinex-api-node`
 
 ### **Para desarrolladores**:
+
 - **Usar GitHub Packages** - Mejor integración con GitHub
 - Acceso a código fuente y issues integrado
 
 ### **Para distribución**:
+
 - **Publicar en ambos** - Máxima accesibilidad
 - npm público para facilidad, GitHub para integración
 

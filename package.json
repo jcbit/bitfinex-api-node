@@ -1,6 +1,6 @@
 {
   "name": "@jcbit/bitfinex-api-node",
-  "version": "7.1.1",
+  "version": "7.2.0",
   "description": "Node reference library for Bitfinex API - Modernized Fork",
   "engines": {
     "node": ">=20.0.0",
@@ -64,11 +64,11 @@
     "blessed-contrib": "^4.11.0",
     "cli-table3": "^0.6.5",
     "docdash": "^2.0.2",
-    "dotenv": "^16.4.5",
+    "dotenv": "^17.2.1",
     "husky": "^9.1.6",
     "jsdoc": "^4.0.4",
-    "jsdoc-to-markdown": "^9.0.1",
-    "mocha": "^11.7.0",
+    "jsdoc-to-markdown": "^9.1.2",
+    "mocha": "^11.7.1",
     "nodemon": "^3.1.7",
     "p-iteration": "^1.1.8",
     "readline-promise": "^1.0.5",
@@ -80,14 +80,14 @@
     "bfx-api-node-rest": "^6.0.0",
     "bfx-api-node-util": "^1.0.12",
     "bfx-api-node-ws1": "^1.0.4",
-    "bignumber.js": "^9.3.0",
+    "bignumber.js": "^9.3.1",
     "cbq": "^0.0.1",
     "debug": "^4.4.1",
     "lodash": "^4.17.21",
     "lodash.throttle": "^4.1.1",
     "lossless-json": "^4.1.1",
     "promise-throttle": "^1.1.2",
-    "ws": "^8.18.2"
+    "ws": "^8.18.3"
   },
   "standard": {
     "ignore": [
