@@ -1,6 +1,6 @@
 {
   "name": "@jcbit/bitfinex-api-node",
-  "version": "7.2.1",
+  "version": "7.2.2",
   "description": "Node reference library for Bitfinex API - Modernized Fork",
   "engines": {
     "node": ">=20.0.0",
